@@ -4,19 +4,39 @@ import FoodImage from '../../assets/food.jpg'
 import MovieImage from '../../assets/movie.png'
 import LifeImage from '../../assets/life.jpg'
 import style from './style.module.css'
-
+import classNames from 'classnames'
+const tabs = [
+  {
+    key: 'cartoon',
+    title: 'Cartoon',
+  },
+  {
+    key: 'food',
+    title: 'Food',
+  },
+  {
+    key: 'movie',
+    title: 'Movie',
+  },
+  {
+    key: 'life',
+    title: 'Life',
+  },
+]
 const SecondSection: FC = () => {
-  const [activeTap, setActiveTap] = useState<string>('cartoon')
+  const [activeTab, setActiveTab] = useState<string>('cartoon')
   return (
     <div className={style.secondSection}>
       <ul>
-        <li>
-          <span>Cartoon</span>
-          {activeTap === 'cartoon' && <span className={style.line}> </span>}
-        </li>
-        <li>Food</li>
-        <li>Movies</li>
-        <li>Life</li>
+        {tabs.map((tab) => (
+          <li key={tab.key} onClick={() => setActiveTab(tab.key)}>
+            <span>{tab.title}</span>
+            <span
+              className={classNames(style.line, {
+                [style.visible]: activeTab === tab.key,
+              })}></span>
+          </li>
+        ))}
       </ul>
       <div>
         <section>

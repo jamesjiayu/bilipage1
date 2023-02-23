@@ -1,3 +1,8 @@
+.secondSection {
+  width: 100%;
+  position: relative;
+  padding-top: 56px;
+}
 .secondSection img {
   width: 100%;
   margin-top: 16px;
@@ -8,6 +13,10 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #e36c3f;
 }
 li {
   position: relative;
@@ -27,6 +36,9 @@ li {
 }
 .visible {
   opacity: 1;
+}
+.isFixed {
+  position: fixed;
 }
 section {
   padding: 16px;

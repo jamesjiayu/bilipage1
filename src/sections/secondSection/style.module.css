@@ -42,7 +42,36 @@ li {
 }
 section {
   padding: 16px;
+  scroll-margin: 56px;
 }
 h2 {
   color: white;
+}
+.btnWrapper {
+  /* opacity: 0;
+  transition: opactiy 0.3s; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 16px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.btnWrapper img {
+  width: 100px;
+}
+.btnWrapper button {
+  color: white;
+  background-color: #fb7299;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: none;
 }
